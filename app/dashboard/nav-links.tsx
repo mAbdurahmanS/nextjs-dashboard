@@ -1,6 +1,5 @@
 'use client';
 
-
 import {
     UserGroupIcon,
     HomeIcon,
@@ -10,9 +9,24 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
-
-
-// ...
+// Declare the `links` array here
+const links = [
+    {
+        name: "Dashboard",
+        href: "/",
+        icon: HomeIcon, // Component reference
+    },
+    {
+        name: "Users",
+        href: "/users",
+        icon: UserGroupIcon, // Component reference
+    },
+    {
+        name: "Documents",
+        href: "/documents",
+        icon: DocumentDuplicateIcon, // Component reference
+    },
+];
 
 export default function NavLinks() {
     const pathname = usePathname();
